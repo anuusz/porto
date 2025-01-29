@@ -1,0 +1,60 @@
+body {
+    font-family: "Caveat", serif;
+    background-color: #1c1727;
+    color: #00ffd4;
+    margin: 0;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+} 
+  /* Articles grid styling */
+  .articles {
+    display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    /* padding: 20px; */
+    padding-top: 75px;
+  }
+  
+  .article-item {
+    background-color: #1c1727;
+    /* background-color: rgba(0, 255, 212, 0.5) ; */
+    border-radius: 25px 50px 25px 50px;
+    box-shadow: 0 0 10px rgba(0, 255, 212, 1);
+    overflow: hidden;
+    text-align: left;
+  }
+
+  .article-item a {
+    overflow: hidden;
+    text-align: left;
+    color: #00ffd4;
+    text-decoration: none;
+  }
+  
+  .article-image {
+    width: 100%;
+    height: 175px;
+    object-fit: cover;
+  }
+  
+  .article-content {
+    padding: 20px;
+  }
+  
+  .tags {
+    margin-top: 10px;
+  }
+  
+  .tag {
+    display: inline-block;
+    background-color: #00ffd2;
+    color: #4caf50;
+    padding: 5px 10px;
+    border-radius: 25px;
+    margin-right: 5px;
+    font-size: 12px;
+  }
+  
+  

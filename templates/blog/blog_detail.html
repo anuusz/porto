@@ -1,0 +1,97 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% comment %} Caveat {% endcomment %}
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <!-- icon -->
+    <link rel="icon" type="image/png" href="{% static 'img/nszblank.png' %}">
+    <title>{{ post.title }}</title>
+    <style>
+        /* General reset */
+        body {
+            font-family: "Caveat", serif;
+            background-color: #1c1727;
+            color: #1c1727;
+            margin: 0;
+            padding: 25px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .blog {
+            padding-top: 75px;
+        }
+
+        .blog-container {
+            width: 50%;
+            /* max-height: 90vh; */
+            overflow-y: auto;
+            /* background-color: rgba(0, 255, 212, 1); */
+            background-color: #22004a;
+            border-radius: 10px 50px 10px 50px;
+            /* box-shadow: 0 0 10px rgba(0, 255, 212, 1); */
+            padding: 25px;
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #ff0092; /* Warna latar belakang */
+            color: #00ffd4; /* Warna teks */
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 10px 50px 10px 50px;
+            text-decoration: none;
+            text-align: center;
+            cursor: pointer;
+        }
+        
+        .button:hover {
+            background-color: rgba(255, 0, 146, 0.75);
+            box-shadow: 0 0 10px rgba(255, 0, 146, 1);
+        }
+        
+
+        .blog-title {
+            font-size: 2em;
+            font-weight: bold;
+            color: #00ffd4;
+            margin-bottom: 10px;
+        }
+
+        .blog-content {
+            font-size: 1.2em;
+            color: #00ffd4;
+            line-height: 1.6;
+            text-align: justify;
+            margin-bottom: 20px;
+            padding: 50px;
+        }
+
+        .blog-author {
+            font-size: 1em;
+            font-style: italic;
+            color: #888;
+        }
+    </style>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div class="blog"></div>
+    <div class="blog-container">
+        <h1 class="blog-title">{{ post.title }}</h1>
+        <div class="blog-content">{{ post.content|safe }}</div>
+        <p class="blog-author">Author: {{ post.author }}</p>
+        <p>Created at: {{ post.created_at }}</p>
+        <a href="{% url 'blog_list' %}" class="button">Lihat Artikel Lainnya</a>
+    </div>
+    </div>  
+</body>
+</html>

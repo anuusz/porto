@@ -1,0 +1,53 @@
+<body>
+  <header>
+    <nav>
+      <a class="home" href="{% url 'home' %}">Home</a>
+      <a class="project" href="{% url 'projects' %}">Projects</a>
+      <a class="setup" href="{% url 'setup' %}">Setup</a>
+      <a class="blog" href="{% url 'blog_list' %}">Blog</a>
+      <a class="login" href="">Login</a>
+    </nav>
+  </header>
+</body>
+
+<style>
+  header {
+      background-color: rgba(28, 23, 39, 0.75);
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-radius: 10px 50px 10px 50px;
+      box-shadow: 0 0 10px rgba(255, 0, 146, 1);
+      position: fixed;
+    }
+
+    nav a {
+      color: #00ffd4;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 18px;
+      
+    }
+
+    .home:hover {
+      color: #ff0092;
+      text-shadow: 0 5px 7.5px rgba(255, 0, 146, 1);
+    }
+
+    .project:hover {
+      color: #ff0000;
+      text-shadow: 0 5px 7.5px rgba(255, 0, 0, 1);
+    }
+
+    .setup:hover {
+      color: #00ff00;
+      text-shadow: 0 5px 7.5px rgba(0, 255, 0, 1);
+    }
+
+    .blog:hover {
+      color: #0000ff;
+      text-shadow: 0 5px 7.5px rgba(0, 0, 255, 1);
+    }
+</style>

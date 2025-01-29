@@ -1,0 +1,130 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/portfolio/home.css' %}">
+    <link rel="icon" type="image/png" href="{% static 'img/nszblank.png' %}">
+    <title>Setup</title>
+    <style>
+        body {
+            font-family: "Caveat", serif;
+            background-color: #1c1727;
+            color: #00ffd4;
+            margin: 0;
+            padding: 25px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .main {
+            text-align: left;
+            max-width: 800px;
+            width: 100%;
+            padding-top: 75px;
+        }
+        .main h1 {
+            text-align: center;
+            font-weight: 700;
+            font-size: 48px;
+            text-shadow: 0 5px 7.5px rgba(0, 255, 0, 1);
+        }
+        .main h1:hover {
+            color: #00ff00;            
+        }
+    
+        .content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .paragraf {
+            max-width: 500px;
+            font-size: 16px;
+        }
+    
+        .pic {
+            max-width: 300px; 
+            text-align: center;
+        }
+    
+        .pic img {
+            width: 300px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div class="main">
+        <h1>My Setup!</h1>
+        <div class="content">
+            <div class="paragraf">
+                <h2>Main</h2>
+                    <ul>ASUS X441UB 2018</ul>
+                    <p>Proccesor : Intel i3 6600u <br>
+                       RAM : 8 GB <br>
+                       GPU : NVDIA MX110 + intel UHD 620 <br>
+                       SSD : 256 GB (Windows) + 512 GB (Pop OS)
+                    </p>
+
+                <h2>Second</h2>
+                    <ul>PC Windows + Ubuntu 2020</ul>
+                    <p>Motherboard : MSI b50 Bomber <br>
+                        Procesor : Intel i5 10400 <br>
+                        RAM : 8GB <br>
+                        SSD : 256 (OS) <br>
+                        HDD : 1TB (Storage) + 250GB (Ubuntu) <br>
+                        PSU : Armagedon 265 Bronze <br>
+                        Monitor : Philips 19 Inch
+                    </p>
+
+                <h2>Additional</h2>
+                    <ul>TCL 55 Inch Smart TV</ul>                    
+                    <ul>Speaker Bluetooth Robot RB120</ul>
+                    <ul>Huawei Freebuds 3</ul>
+                    <ul>@aoki lampu belajar</ul>
+
+                    <br><br>
+                <h2>Dev Setup</h2>
+                <h3>IDE</h3>
+                    <ul>VSCode <br>
+                        Pycharm Pro <br>
+                        Webstorm
+                    </ul>
+                <h3>Language</h3>
+                    <ul>Python 3.11.10 <br>
+                        Go 18.1 <br>
+                        Java 22 <br>
+                    </ul>
+                    <h3>Framework</h3>
+                    <ul>Django <br>
+                        Vue.js
+                    </ul>
+                <h3>Terminal</h3>
+                    <ul>Alacritty <br>
+                        ohmyzsh <br>
+                    </ul>
+
+                    <br><br>
+                <h3>Note-Read</h3>
+                    <ul>Notion <br>
+                        Sticky Notes <br>
+                        Foliate
+                    </ul>
+                <h3>Tools</h3>
+                    <ul>Color Picker <br>
+                        Github <br>
+                        Postman
+                    </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

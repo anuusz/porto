@@ -1,0 +1,21 @@
+header {
+    /* background-color: #66000000; */
+    background-color: #1c1727;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.25);
+  }
+
+  nav a {
+    color: #00ffd4;
+    margin: 0 15px;
+    text-decoration: none;
+    font-weight: 700;
+  }
+
+  nav a:hover {
+    color: #ff0092;
+  }
