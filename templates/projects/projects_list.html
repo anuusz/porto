@@ -7,6 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="{% static 'img/nszblank.png' %}">
     <title>Projects</title>
     <style>
         body {
@@ -19,12 +20,27 @@
             flex-direction: column;
             align-items: center;
         }
+
+        .title {
+            padding-top: 25px;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-weight: 700;
+            font-size: 24px;
+            text-shadow: 0 5px 7.5px rgba(255, 0, 0, 1);
+        }
+
+        .title:hover {
+            color: #ff0000;
+        }
+
         .projects {
             display: flex;
             flex-wrap: wrap;
             gap: 20px;
             /* padding: 20px; */
-            padding-top: 75px;
+            /* padding-top: 75px; */
             justify-content: center;
         }
 
@@ -74,6 +90,9 @@
 <body>
     {% include 'navbar.html' %}
     <main>
+        <div class="title">
+            <h1>My Projects</h1>
+        </div>
         <section class="projects">
             {% for project in projects %}
             <article class="project-item">
